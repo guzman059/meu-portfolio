@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portifólio</title>
+</head>
+<body>
+    <div class="particulas"></div>
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu_link">Início</a>
+            </li>
+             <li>
+                <a href="#sobre" class="menu_link">Sobre</a>
+            </li>
+             <li>
+                <a href="#projetos" class="menu_link">Projetos</a>
+            </li>
+             <li>
+                <a href="#contatos" class="menu_link">Contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+            <img src="/img/icon.png" accesskey="Foto de perfil" class="foto_perfil">
+            <h1>Gustavo Vieira</h1>
+            <p class="desc_cabecalho">Desenvolvedor Full Satack</p>     
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre_titulo">Sobre mim</h2>
+        <div class="sobre_caixa"> 
+            <p class="sobre_paragrafo">Olá! Meu nome é Gustavo, tenho 20 anos e estou no último semestre do curso Técnico em Informática pelo Senac. Também curso Análise e Desenvolvimento de Sistemas no primeiro semestre. Tenho experiência em suporte técnico e, atualmente, estou me dedicando aos estudos para me tornar desenvolvedor, sempre buscando evoluir e aprender novas tecnologias.</p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos_titulo">Meus Projetos</h2>
+        <div class="projetos_div"> 
+
+            <div class="projetos_card">
+                    <img src="img/sport_elite.png" alt="img"  class="projetos_imagem">
+                <div class="caixa_textos_projetos">
+                    <h3 class="info_projetos">Loja artigos esportivos</h3>
+                    <p class="desc_projetos">Loja virtual moderna e minimalista com foco em roupas e artigos de esporte totalmente estilizada</p>
+                </div>
+            </div>
+
+             <div class="projetos_card">
+                    <img src="img/clinica.png" alt="img"  class="projetos_imagem">
+                <div class="caixa_textos_projetos">
+                    <h3 class="info_projetos">Sistema de cadastro</h3>
+                    <p class="desc_projetos">Sistema de cadastro de pacientes e geração de ficha</p>
+                </div>
+            </div>
+
+             <div class="projetos_card">
+                <img src="img/ia.png" alt="img"  class="projetos_imagem">
+            <div class="caixa_textos_projetos">
+                <h3 class="info_projetos">I.A</h3>
+                <p class="desc_projetos">Front End de uma inteligência artificial moderna e integrada com várias páginas</p>
+            </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos_titulo">Entre em Contato</h2>
+        <form class="formulario_contato" id="formulario" onsubmit="enviar_whats(event)">
+            <div  class="grupo_form">
+                <input placeholder="Nome" class="campo_form" id="nome">
+            </div>
+            <div  class="grupo_form">
+                <textarea placeholder="Digite sua Mensagem" rows="6"    class="campo_form" id="mensagem"></textarea>
+            </div>
+            <button type="submit" class="botao_form">Enviar WhatsApp</button>
+        </form>
+    </section>
+
+    <script>
+        function enviar_whats(event) {
+        event.preventDefault()
+
+        const nome= document.getElementById('nome').value;
+        const mensagem= document.getElementById('mensagem').value;
+        const telefone= '5538999242314';
+        
+        const texto = `Olá me chamo ${nome} , ${mensagem}`
+        const mensagem_formatada= encodeURIComponent(texto)
+
+        const url = `https://wa.me/${telefone}?text=${mensagem_formatada}`
+
+        window.open(url, '_blank')
+        }
+
+        
+    </script>
+    
+</body>
+</html>
