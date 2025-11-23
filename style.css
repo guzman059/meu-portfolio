@@ -104,14 +104,38 @@ h1{
     margin-bottom: 20px;
 }
 
-.sobre_caixa{
-    padding: 2rem;
+.sobre_caixa {
+    width: 100%;
     max-width: 800px;
+    padding: 1.8rem;
     margin: 0 auto;
-    border-radius: 26px;
-    border: solid 1px var(--vidro);
-    background-color: var(--vidro);
+
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(14px);
+
+    border-radius: 22px;
+    box-shadow: 0 6px 32px rgba(0, 0, 0, 0.25);
+
+    text-align: justify;
+    line-height: 1.7;
+    hyphens: auto;
+    word-break: break-word;
 }
+
+/* Mobile */
+@media (max-width: 600px) {
+    .sobre_caixa {
+        padding: 1.4rem;
+        width: 92%;
+        border-radius: 18px;
+    }
+
+    .sobre_caixa p {
+        text-align: left;
+    }
+}
+
 
 .sobre_paragrafo{
     color: white;
@@ -168,9 +192,18 @@ h1{
     padding: 2rem;
 }
 
-.desc_projetos{
+.desc_projetos {
     color: rgba(226,232,240,0.8);
     line-height: 1.25rem;
+    text-align: justify;
+    hyphens: auto;
+    word-break: break-word;
+}
+
+@media (max-width: 600px) {
+    .desc_projetos {
+        text-align: left; 
+    }
 }
 
 
