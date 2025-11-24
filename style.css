@@ -105,6 +105,7 @@ h1{
 }
 
 
+/* Caixa principal */
 .sobre_caixa {
     width: 100%;
     max-width: 700px;
@@ -119,33 +120,30 @@ h1{
 
     line-height: 1.55;
     letter-spacing: 0.2px;
-
-    text-align: left;
-    hyphens: none;
-    word-break: normal;
-    word-spacing: normal;
 }
 
-.sobre_caixa * {
-    text-align: left;
-    hyphens: none;
+/* Estilo do texto (MOBILE) */
+.sobre_caixa p {
+    text-align: left;       /* impede justify no mobile */
     word-break: normal;
     word-spacing: normal;
+    hyphens: none;
+    text-justify: auto;
 }
 
+/* DESKTOP — ativa justify */
 @media (min-width: 900px) {
-    .sobre_caixa,
-    .sobre_caixa * {
-        text-align: justify;
-        text-align-last: left;
-        text-justify: inter-word;
-    }
-
     .sobre_caixa {
         max-width: 800px;
     }
-}
 
+    .sobre_caixa p {
+        text-align: justify;
+        text-align-last: left;
+        text-justify: inter-word;
+        hyphens: auto;  /* melhora o justify */
+    }
+}
 
 
 .sobre_paragrafo{
@@ -301,6 +299,7 @@ h1{
         transform: translateY(-20%);
     }
 }
+
 
 
 
