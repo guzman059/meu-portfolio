@@ -104,7 +104,7 @@ h1{
     margin-bottom: 20px;
 }
 
-```  
+
 .sobre_caixa {
     width: 100%;
     max-width: 700px;
@@ -120,23 +120,23 @@ h1{
     line-height: 1.55;
     letter-spacing: 0.2px;
 
-    text-align: left !important;
-    hyphens: none !important;
-    word-break: normal !important;
-    word-spacing: normal !important;
+    text-align: left;
+    hyphens: none;
+    word-break: normal;
+    word-spacing: normal;
 }
 
 .sobre_caixa * {
-    text-align: left !important;
-    hyphens: none !important;
-    word-break: normal !important;
-    word-spacing: normal !important;
+    text-align: left;
+    hyphens: none;
+    word-break: normal;
+    word-spacing: normal;
 }
 
 @media (min-width: 900px) {
     .sobre_caixa,
     .sobre_caixa * {
-        text-align: justify !important;
+        text-align: justify;
         text-align-last: left;
         text-justify: inter-word;
     }
@@ -145,7 +145,7 @@ h1{
         max-width: 800px;
     }
 }
-```
+
 
 
 .sobre_paragrafo{
