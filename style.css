@@ -113,33 +113,38 @@ h1{
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(14px);
-
     border-radius: 22px;
     box-shadow: 0 6px 32px rgba(0, 0, 0, 0.25);
 
-    text-align: justify !important;      /* ← Justifica o texto */
-    text-align-last: left !important;     /* ← Última linha alinhada à esquerda */
-    line-height: 1.6;
-    letter-spacing: 0.1px;
-    word-break: normal;
-    hyphens: none;
-    white-space: normal;
+    line-height: 1.55;
+    letter-spacing: 0.2px;
+
+    /* Mobile padrão */
+    text-align: left;
+    hyphens: auto;
 }
 
+/* Remove justificação nos elementos internos (mobile) */
 .sobre_caixa * {
-    text-align: justify !important;        /* ← Garante que todos os elementos internos fiquem justificados */
-    text-align-last: left !important;
-    word-break: normal;
-    hyphens: none;
-    white-space: normal;
+    text-align: left;
+    hyphens: auto;
 }
 
-/* Desktop */
+/* Justificação só em telas grandes */
 @media (min-width: 900px) {
+    .sobre_caixa,
+    .sobre_caixa * {
+        text-align: justify;
+        text-align-last: left;
+        text-justify: inter-word;
+    }
+
     .sobre_caixa {
-        max-width: 800px !important;
+        max-width: 800px;
     }
 }
+
+
 
 
 .sobre_paragrafo{
@@ -295,5 +300,6 @@ h1{
         transform: translateY(-20%);
     }
 }
+
 
 
